@@ -1,0 +1,27 @@
+#page-content{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+.pack{
+        width: 30%;
+        min-height: 400px;
+        background-color: rgb(243, 239, 239);
+        opacity: 1;
+        border-radius: 10px;
+        text-align: left;
+        color: black;      
+}
+
+.pack:hover{
+    background-color: #f9a826;
+}
+
+
+.represent{
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.794);
+    border-top-right-radius: 10px;
+    background-repeat: no-repeat;
+}
