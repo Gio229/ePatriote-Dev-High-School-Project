@@ -69,7 +69,6 @@ nav{
 .texte h1{
     font-size: 90px;
     margin: 10px;
-    overflow: hidden;
 }
 
 .texte h1:hover{
@@ -177,6 +176,7 @@ footer{
     background-color: black;
     color: white;
     display: flex;
+    bottom: 0%;
 }
 
 .leftfoot{
