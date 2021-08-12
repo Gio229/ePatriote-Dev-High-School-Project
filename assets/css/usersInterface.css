@@ -1,9 +1,9 @@
-
+/*style of the the dash-nav (menu of the userInterface)*/
 .dash-nav {
     min-height: 15%; 
     width: 0; 
     position: fixed; 
-    z-index: 1;
+    z-index: 50;
     left: 0;
     top: 0;
     background-color: #111; 
@@ -77,6 +77,8 @@
     margin-top: 10px;
     margin-left: 10px;
     margin-bottom: 10px;
+    position: fixed;
+    z-index: 40;
 
 
   }
@@ -85,3 +87,175 @@
     background-color: #F9a826;
     color: black;
   }
+
+/* Style of the block program */
+.prog {
+  background-color: #f9a826;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+}
+
+
+.active, .prog:hover {
+  background-color: black;
+  color: white;
+}
+
+
+.panel {
+  padding: 0 18px;
+  background-color: rgb(243, 243, 243);
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: 0.2s ;
+}
+
+.program{
+  width: 80%;
+  margin-left: 10%;
+}
+
+.top{
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.bottom{
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.illustration-program{
+  display: flex ;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 50vh;
+  background-size: 100% 100%;
+}
+
+.illustration-img-program{
+  margin-top: 1%;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/*tabs system*/
+.tabs li a{
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 10px 15px;
+}
+.tabs .tab-active a{
+  background-color: black;
+  color: #F9a826 ;
+}
+
+.tab-content{
+  display: none;
+  
+  
+}
+
+.tabs-content{
+  
+  background-color: rgb(243, 243, 243);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 20px;
+}
+
+.tab-content.tab-active{
+  display: block;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.tab-content.tab-active.transit{
+  opacity: 1;
+}
+
+.tabs li{
+  list-style: none ;
+  float: left;
+}
+.tabs{
+  margin: 0px;
+}
+
+.tabs::after{
+  display: table;
+  content: ' ';
+  clear: both;
+}
+
+/*Note system-----------------------------*/
+.note {
+  min-height: 15%; 
+  width: 0; 
+  position:fixed; 
+  z-index: 10;
+  left: 2%;
+  top: 2%;
+  background-color: #111; 
+  overflow-x: hidden; 
+  padding-top: 60px;
+  padding-bottom: 60px;
+  transition: 0.2s; 
+  border-radius: 10px;
+  overflow-y: scroll;
+  max-height: 100%;
+}
+
+
+/*  close button  */
+.closeNote {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  border-radius: 50%;
+  background-color: #111;
+  border-style: none;
+  width: 50px;
+  height: 50px;
+  color: #F9a826;
+}
+
+.closeNote:hover{
+    color: white;
+}
+
+/* Style the button that is used to open the dadh-nav */
+.openNote {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: #F9a826;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+
+
+}
+
+.openNote:hover {
+  background-color: #F9a826;
+  color: black;
+}
+
+.note-table{
+  margin-bottom: 2%;
+}
