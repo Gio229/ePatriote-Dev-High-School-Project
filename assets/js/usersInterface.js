@@ -82,3 +82,13 @@ function openNote() {
 function closeNote() {
   document.getElementById("note").style.width = "0px";
 }
+
+/*animation for the manag-parents system*/
+
+function openManagParents() {
+  document.getElementById("manag-parents").style.width = "95%";
+}
+
+function closeManagParents() {
+  document.getElementById("manag-parents").style.width = "0px";
+}

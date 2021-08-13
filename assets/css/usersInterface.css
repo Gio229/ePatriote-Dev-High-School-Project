@@ -211,7 +211,6 @@
   padding-bottom: 60px;
   transition: 0.2s; 
   border-radius: 10px;
-  overflow-y: scroll;
   max-height: 100%;
 }
 
@@ -258,4 +257,46 @@
 
 .note-table{
   margin-bottom: 2%;
+}
+
+.edit{
+  width: 50px;
+  color: #F9A826;
+  display: inline-block;
+  background-color: black;
+  padding: 5px;
+  text-decoration: none;
+  border-radius: 10px ;
+}
+
+.edit:hover{
+  opacity: 0.8;
+}
+
+.delete{
+  width: 70px;
+  color: #F9A826;
+  display: inline-block;
+  background-color: black;
+  padding: 5px;
+  text-decoration: none;
+  border-radius: 10px ;
+}
+
+.delete:hover{
+  opacity: 0.8;
+}
+
+.add{
+  width: 50px;
+  color: #F9A826;
+  display: inline-block;
+  background-color: black;
+  padding: 5px;
+  text-decoration: none;
+  border-radius: 10px ;
+}
+
+.add:hover{
+  opacity: 0.8;
 }

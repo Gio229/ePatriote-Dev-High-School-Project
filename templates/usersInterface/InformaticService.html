@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navbar Curvy</title>
+    <title>ePatriote Dev High School</title>
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="stylesheet" href="../../assets/css/usersInterface.css">
     <link rel="stylesheet" href="../../assets/css/form.css" />
@@ -40,29 +40,58 @@
     </div>
       
     <div id="contenu">
-        <h1>[Interface utilisateur (parents)]</h1>
+        <h1>[Interface utilisateur (Service informatique)]</h1>
 
         <br><br>
-        
 
-            <br><br><br> <br><br><br> 
         <section class="program">
-            <h2>[Voir les résultats de votre enfant]</h2>
+            <h2>[Administrateur général]</h2>
             <div class="container-program">
+
                 <div class="illustration-program">
-                    <img class="illustration-img-program" src="../../assets/images/parents.svg" alt="1">
+                    <img class="illustration-img-program" src="../../assets/images/admin.svg" alt="1">
                 </div>
                 <form action="" method="POST">
 
-                    <p>Renseignez le matricule de l'élève et votre code parent</p><br>
+                    <p>Entrer votre mot de passe pour mettre le site en maintenance</p><br>
                     <table>
-                        <tr><td><label for="matricule">Matricule:</label></td><td><input type="text" id="matricule" name="matricule" required></td></tr>
-                        <tr><td><label for="codeParent">Code parent:</label></td><td><input type="text" id="codeParent" name="codeParent" required></td></tr>
+                        <tr><td><input type="password" name="passMaintenance" required></td></tr>
                     </table>
-                    <input class="envoie" type="submit" value="Valider">
+                    <input class="envoie" type="submit" value="Appliquer" onClick="return confirm('Voulez-vous appliquer ?')">
     
                 </form>
+            </div>
+        </section>
+        <br><br>
+        <section class="program">
+            <h2>[Statistiques du site]</h2>
+            <div class="container-program">
+
+                <div class="illustration-program">
+                    <img class="illustration-img-program" src="../../assets/images/undraw_statistic_chart_38b6.svg" alt="1">
+                </div>
                 <h3>(Rien pour le moment)</h3>
+            </div>
+        </section>
+        <br><br>
+        <section class="program">
+            <h2>[Gérer les censeurs]</h2>
+            <div class="container-program">
+
+                <div class="illustration-program">
+                    <img class="illustration-img-program" src="../../assets/images/undraw_online_organizer_ofxm.svg" alt="1">
+                </div>
+                <form action="" method="POST">
+
+                    <p>Accordez des droits de censeurs à un utilisateur</p><br>
+                    <table>
+                        <tr><td><label for="userName">Nom utilisateur:</label></td><td><input type="text" id="userName" name="userName" required></td></tr>
+                        <tr><td><label for="userName">Email utilisateur:</label></td><td><input type="email" id="mail" name="mail" required></td></tr>
+                        <tr><td><label for="passMaintenance">Votre mot de passe:</label></td><td><input id="passMaintenance" type="password" name="passMaintenance" required></td></tr>
+                    </table>
+                    <input class="envoie" type="submit" value="Appliquer" onClick="return confirm('Voulez-vous appliquer ?')">
+    
+                </form>
             </div>
         </section>
 

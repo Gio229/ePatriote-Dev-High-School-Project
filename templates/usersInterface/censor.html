@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ePatriote Dev High School</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/usersInterface.css">
+    <link rel="stylesheet" href="../../assets/css/form.css" />
+</head>
+<body>
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+
+    <div id="dash" class="dash-nav">
+        <button href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</button>
+        <div class="nav-row">
+            <a href="../publics/home/index.html">Accueil</a>
+        </div>
+        <div class="nav-row">
+            <a href="#">Services</a>
+        </div>
+        <div class="nav-row">
+            <a href="#">Paramètres</a>
+            <div class="nav-row drop-son">
+                <a href="#">1</a>
+            </div>
+            <div class="nav-row drop-son">
+                <a href="#">2</a>
+            </div>
+            <div class="nav-row drop-son">
+                <a href="#">3</a>
+            </div>
+        </div>
+        <div class="nav-row">
+            <a href="#">option 1</a>
+        </div>
+        <div class="nav-row">
+            <a href="#">option 2</a>
+        </div>
+    </div>
+      
+    <div id="contenu">
+        <h1>[Interface utilisateur (Censor)]</h1>
+
+        <br><br>
+
+        <section class="program">
+            <h2>[Programmer des devoirs]</h2>
+            <div class="container-program">
+
+                <div class="illustration-program">
+                    <img class="illustration-img-program" src="../../assets/images/exams.svg" alt="1">
+                </div>
+                <form action="" method="POST">
+
+                    <p>Remplissez les champs pour programmer un devoir</p><br>
+                    <table>
+                        <tr><td><label for="classes">Classes:</label></td><td>
+                            <select name="classes" id="classes" required>
+                                <option value="seconde">seconde</option>
+                                <option value="première">première</option>
+                                <option value="terminnale">terminnale</option>
+                            </select>
+                        </td></tr>
+                        <tr><td><label for="day">Date:</label></td><td><input type="date" id="day" name="day" required></td></tr>
+                        <tr><td><label for="hour">Heure:</label></td><td><input type="time" id="hour" name="hour" required></td></tr>
+                        <tr><td><label for="matiere">Matière:</label></td><td><input type="text" id="matiere" name="matiere" required></td></tr>
+                    </table>
+                    <input class="envoie" type="submit" value="Valider" onClick="return confirm('Voulez-vous appliquer ?')">
+    
+                </form>
+            </div>
+        </section>
+
+        <section class="program">
+            <h2>[Gestion]</h2>
+            <div class="container-program">
+
+                <div class="illustration-program">
+                    <img class="illustration-img-program" src="../../assets/images/censor.svg" alt="1">
+                </div>
+
+                <div>
+                    <button class="openNote" onclick="openNote()">Gérer les professeurs</button>
+        
+                    <div id="note" class="note">
+                        <button href="javascript:void(0)" class="closeNote" onclick="closeNote()">&times;</button>
+                        
+                        <form action="" method="POST">
+
+                            <p>Accordez des droits de professeur à un utilisateur</p><br>
+                            <table>
+                                <tr><td><label for="userName">Nom utilisateur:</label></td><td><input type="text" id="userName" name="userName" required></td></tr>
+                                <tr><td><label for="userName">Email utilisateur:</label></td><td><input type="email" id="mail" name="mail" required></td></tr>
+                                <tr><td><label for="classe">Classe:</label></td><td><input type="text" id="classe" name="classe" required></td></tr>
+                                <tr><td><label for="course">Matière:</label></td><td><input type="text" id="course" name="course" required></td></tr>
+                                <tr><td><label for="pass">Votre mot de passe:</label></td><td><input id="pass" type="password" name="pass" required></td></tr>
+                            </table>
+                            <input class="envoie" type="submit" value="Appliquer" onClick="return confirm('Voulez-vous appliquer ?')">
+            
+                        </form>
+                    </div>
+                </div>
+                <div>
+                    <button class="openNote" onclick="openManagParents()">Gérer les parents d'élève</button>
+        
+                    <div id="manag-parents" class="note">
+                        <button href="javascript:void(0)" class="closeNote" onclick="closeManagParents()">&times;</button>
+                        
+                        <form action="" method="POST">
+
+                            <p>Accordez des droits de parent à un utilisateur</p><br>
+                            <table>
+                                <tr><td><label for="userName">Nom utilisateur:</label></td><td><input type="text" id="userName" name="userName" required></td></tr>
+                                <tr><td><label for="userName">Email utilisateur:</label></td><td><input type="email" id="mail" name="mail" required></td></tr>
+                                <tr><td><label for="matricule">Matricule élève:</label></td><td><input type="text" id="matricule" name="matricule" required></td></tr>
+                                <tr><td><label for="pass">Votre mot de passe:</label></td><td><input id="pass" type="password" name="pass" required></td></tr>
+                            </table>
+                            <input class="envoie" type="submit" value="Appliquer" onClick="return confirm('Voulez-vous appliquer ?')">
+            
+                        </form>
+                    </div>
+                </div>
+
+                <div>
+                    <ul class="tabs">
+                        <li class="tab-active">
+                             <a href="#Seconde">Seconde</a>
+                        </li>
+                        <li>
+                             <a href="#Première">Première</a>
+                        </li>
+                        <li>
+                            <a href="#Terminale">Terminale</a>
+                        </li>
+                    </ul>
+                    <div class="tabs-content">
+                        <div class="tab-content tab-active transit" id="Seconde">
+                            <h3>Gérer les élèves</h3>
+                            <table class="note-table" style="background-color: white;">
+                                <tr><th>Nom</th><th>Prénom(s)</th></tr>
+                                <tr>
+                                    <td>yucye</td>  
+                                    <td>evc eh</td>
+                                    <td><a href="editEleve.html" class="edit">Editer</a></td>
+                                    <td><a href="#" class="delete" onClick="return confirm('Voulez-vous vraiment supprimer cet élève ?')">Supprimer</a></td>
+                                </tr>
+                                <tr>
+                                    <td>dksjvn</td>
+                                    <td>zkejz</td>
+                                    <td><a href="editEleve.html" class="edit">Editer</a></td>
+                                    <td><a href="#" class="delete" onClick="return confirm('Voulez-vous vraiment supprimer cet élève ?')">Supprimer</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tab-content" id="Première">
+                            <h3>(Rien pour le moment)</h3>
+                        </div>
+                        <div class="tab-content" id="Terminale">
+                            <h3>(Rien pour le moment)</h3>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section><br><br>  
+        <section class="program">
+            <h2>[Publier les résultats]</h2>
+            <div class="container-program">
+
+                <div class="illustration-program">
+                    <img class="illustration-img-program" src="../../assets/images/bulletins.svg" alt="1">
+                </div>
+                <h3>(Rien pour le moment)</h3>
+            </div>
+        </section>      
+
+    </div>
+
+    
+
+    <footer>
+
+        <div class="leftfoot">
+            <p><a class="navLink" href="#">L'administration</a></p><br>
+            <p><a class="navLink" href="#">Nos services</a></p><br>
+            <p><a class="navLink" href="#">Nos formations</a></p><br>
+            <p><a class="navLink" href="#">Contacts</a></p><br>
+            <p><a class="navLink" href="#">S'inscrire</a></p><br>
+            <p><a class="navLink" href="#">Se connecter</a></p>
+        </div>
+
+        <div class="rightfoot">
+            <p><span style="color: #999;">©ATCHAOUE Giovanni</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Nesciunt harum nam ullam deserunt numquam quisquam asperiores h
+                ic facilis architecto ipsa recusandae, necessitatibus magni ab
+                 veniam saepe iure dolore sint fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores laborum, quia alias delectus natus velit maiores, 
+                vel error excepturi ex hic quasi doloremque iure vitae ipsam, odio sin
+                t maxime eum.</p>
+        </div>
+        
+    </footer>
+</body>
+<script src="../../assets/js/usersInterface.js"></script>
+</html>
