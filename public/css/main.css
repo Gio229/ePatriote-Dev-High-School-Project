@@ -6,7 +6,7 @@
 }
 @font-face{
     font-family: "Acme";
-    src: url("../../assets/fonts/Acme/Acme-Regular.ttf");
+    src: url("../res/Acme/Acme-Regular.ttf");
 }
 
 body{
