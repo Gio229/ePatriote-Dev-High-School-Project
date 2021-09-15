@@ -169,7 +169,7 @@ nav{
 }
 
 /* footer style */
-footer{
+.footer{
     padding-top: 5%;
     padding-bottom: 5%;
     margin-top: 10px;
@@ -180,22 +180,35 @@ footer{
 }
 
 .leftfoot{
-    display: inline-block;
+    /*display: inline-block;*/
     width: 50%;
     border-right: solid white;
     text-align: center;
     text-decoration: underline;
 }
 .rightfoot{
-    display: inline-block;
+    /*display: inline-block;*/
     width: 50%;
     border-left:  white;
-    display: flex;
-    justify-content: center;
-    padding-left: 5%;
-    padding-right: 5%;
+    /*display: flex;
+    justify-content: center;*/
+    margin: auto;
+    text-align: center;
+    /*padding-left: 5%;
+    padding-right: 5%;*/
 }
 
+.speaker{
+    width: 80%;
+    margin: auto;
+    padding: auto;
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10%;
+    min-height: 50vh;
+    border-top: solid;
+}
 
 /*------------------------------*/
 

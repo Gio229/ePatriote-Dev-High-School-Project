@@ -6,9 +6,8 @@
 .pack{
         width: 30%;
         min-height: 400px;
-        background-color: rgb(243, 239, 239);
         opacity: 1;
-        border-radius: 10px;
+        border-radius: 15px;
         text-align: left;
         color: black;      
 }
@@ -21,7 +20,8 @@
 .represent{
     width: 100%;
     height: 200px;
-    background-color: rgba(0, 0, 0, 0.794);
-    border-top-right-radius: 10px;
+    background-color: #f9a826;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
     background-repeat: no-repeat;
 }
