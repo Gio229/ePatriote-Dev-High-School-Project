@@ -16,7 +16,7 @@ use PhpFromZero\Entity\BaseEntity;
 class Informatic extends BaseEntity
 {
 
-    /**
+     /**
      * @var String User's first name
      */
     protected $firstName;
@@ -52,7 +52,7 @@ class Informatic extends BaseEntity
      */
     public function setFirstName(?String $name)
     {
-        $this->name = $name;
+        $this->firstName = $name;
 
         return $this;
     }
@@ -64,7 +64,7 @@ class Informatic extends BaseEntity
      */
     public function getLastName()
     {
-        return $this->firstName;
+        return $this->lastName;
     }
 
     /**
@@ -76,7 +76,7 @@ class Informatic extends BaseEntity
      */
     public function setLastName(?String $name)
     {
-        $this->name = $name;
+        $this->lastName = $name;
 
         return $this;
     }

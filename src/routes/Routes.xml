@@ -7,9 +7,15 @@
 	<route url="/register" controller="AuthController" action="register" />
 	<route url="/parent/me" controller="ParentController" action="index" />
 	<route url="/student/me" controller="StudentController" action="index" />
+	<route url="/student/me/myresults" controller="StudentController" action="myResults" />
 	<route url="/teacher/me" controller="TeacherController" action="index" />
 	<route url="/administration/censor" controller="AdminController" action="censor" />
+	<route url="/administration/censor_management/teacher" controller="AdminController" action="censor_teacherManagement" />
+	<route url="/administration/censor_management/parent" controller="AdminController" action="censor_parentManagement" />
+	<route url="/administration/censor_management/student" controller="AdminController" action="censor_studentManagement" />
 	<route url="/administration/InformaticService" controller="AdminController" action="informaticService" />
+	<route url="/administration/InformaticService_management/add_data" controller="AdminController" action="addData" />
+	<route url="/administration/InformaticService_management/censor" controller="AdminController" action="informaticService_censorManagement" />
 	<route url="/administration/editEleve" controller="AdminController" action="editEleve" />
 	<route url="/logout" controller="AuthController" action="logout" />
 	<!--<route url="/message" controller="MessageController" action="index" />

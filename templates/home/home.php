@@ -6,32 +6,34 @@
         <link rel="icon" href="<?= $ep_base_dir ?>/img/cubic.svg">
         <link rel="stylesheet" href="<?= $ep_base_dir ?>/css/main.css" />
     </head>
-    <body>
-
-        <header class="entete">
+    <body >
+        <div class="home">
+            <header class="entete" id="contenu">
 
             <?php include_once($ep_project_root . '/templates/layouts/homeNav.php'); ?>    
 
             <div>
-
+                
                 <div class="texte">
                     <h1 id="title">ePatriote Dev High School</h1>
                     <h3 id="sub-title">L'expertise à votre service</h3>
                 </div>
     
                 <div class="bouton">
-                    <a href="#signup">
-                        <span>Nous découvrir</span>
+                    <a href="#v">
                         <img src="<?= $ep_base_dir ?>/img/suivant.png" alt="suivant">
                     </a>
                 </div>
 
             </div>
             
-            <div id="signup"></div>
-        </header>
+            <div id="v"></div>
+            </header>
+        </div>
+        
 
-        <section class="container container-gray">
+
+        <!-- <section class="container container-gray">
 
             <div class="illustration">
                 <img class="illustration-img" src="<?= $ep_base_dir ?>/img/sign.svg" alt="1">
@@ -84,14 +86,14 @@
                 <img class="illustration-img" src="<?= $ep_base_dir ?>/img/contacts.svg" alt="2">
             </div>
 
-        </section>
+        </section> -->
 
-<a href="/student/me">usersInterface(élèves)</a>
+<!--<a href="/student/me">usersInterface(élèves)</a>
 <a href="/parent/me">usersInterface(parents)</a>
 <a href="/teacher/me">usersInterface(teachers)</a>
 <a href="/administration/censor">usersInterface(Censor)</a>
 <a href="/administration/InformaticService">serviceInformatique</a>
-<a href="/administration/editEleve">editEleve</a>
+<a href="/administration/editEleve">editEleve</a>-->
 
 
         <?php include_once($ep_project_root . '/templates/layouts/footer.php'); ?> 

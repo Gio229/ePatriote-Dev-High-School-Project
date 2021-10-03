@@ -1,0 +1,42 @@
+
+.management{
+  margin: auto;
+    margin-bottom: 50px;
+    border-radius: 15px;
+    width: 70%;
+    min-height: 30vh;
+    background-color: #F9A826;
+    display: flex;
+  box-shadow:  1px 1px rgba(0, 0, 0, 0.12), 0px 0px rgba(0, 0, 0, 0.24);
+    
+}
+
+.management-col{
+    margin: auto;
+    border-radius: 15px;
+    width: 70%;
+    min-height: 30vh;
+    background-color: #F9A826;
+    display: flex;
+    flex-direction: column;
+  box-shadow:  1px 1px rgba(0, 0, 0, 0.12), 0px 0px rgba(0, 0, 0, 0.24);
+    
+}
+
+.management-content{
+    width: 50%;
+    height: 100%;
+    
+}
+
+.management-illustration{
+    width: 50%;
+    min-height: 30vh;
+    background-image: url(../img/undraw_Taken.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}

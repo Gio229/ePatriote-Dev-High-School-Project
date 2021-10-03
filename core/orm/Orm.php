@@ -205,13 +205,18 @@ class Orm
         if ($conditions) {
             $sql .= " WHERE ";
 
+            /*foreach ($conditions as $key => $value) {
+                $sql .= "$key = :$key AND ";
+                array_push($arrayOfToBind, [ $key,  $value]);
+            }*/
             foreach ($conditions as $key => $value) {
-                $sql .= "$key = :$key AND";
-                array_push($arrayOfToBind, ["key" => $key, "value" => $value]);
+                
+                $sql .= "$key $value[0] :$key AND ";
+                array_push($arrayOfToBind, [ $key, $value[1]]);
             }
 
             // Remove the leading AND
-            $sql = substr_replace($sql, '', -3, 3);
+            $sql = substr_replace($sql, '', -4);
         }
 
 
@@ -248,7 +253,7 @@ class Orm
 
         // BindParams
         foreach ($arrayOfToBind as $toBeBind) {
-            $prepared->bindValue(':' . $toBeBind["key"], $toBeBind["value"]);
+            $prepared->bindValue(':' . $toBeBind[0], $toBeBind[1]);
         }
 
         // Execute query
@@ -257,6 +262,109 @@ class Orm
         return $prepared->fetchAll();
     }
 
+
+
+    /**
+     * 
+     * Find element from requiring certains cretierias
+     * 
+     * 
+     * @param array $conditions [ $key => $value ]
+     * 
+     * Ex:  ["name" => "Dah-kenangnon", "age"=>24]
+     * 
+     * @param array $orderBy [ $key => $value ]
+     * 
+     * Ex:  ["name" => "ASC", "age"=>DESC]
+     * 
+     * @param int $limit 
+     * 
+     * @param int $offset 
+     * 
+     * @return array|null
+     * 
+     */
+    public function findColBy(array $columns = null, array $conditions =  null, array $orderBy = null, int $limit = null, int $offset = null)
+    {
+
+        // This hold our field which need to be bind
+        $arrayOfToBind = [];
+
+
+        // The sql 
+        $sql = "SELECT DISTINCT ";
+
+        foreach ($columns as $value) {
+                
+            $sql .= "$value, ";
+            //array_push($arrayOfToBind, [ $value, $value]);
+        }
+
+        // Remove the leading ,
+        $sql = substr_replace($sql, ' ', -2);
+
+        $sql .= "FROM " . $this->table;
+
+        // Take care about conditions on where
+        if ($conditions) {
+            $sql .= " WHERE ";
+
+            /*foreach ($conditions as $key => $value) {
+                $sql .= "$key = :$key AND ";
+                array_push($arrayOfToBind, [ $key,  $value]);
+            }*/
+            foreach ($conditions as $key => $value) {
+                
+                $sql .= "$key $value[0] :$key AND ";
+                array_push($arrayOfToBind, [ $key, $value[1]]);
+            }
+
+            // Remove the leading AND
+            $sql = substr_replace($sql, '', -4);
+        }
+
+
+
+        // Add order by if needed
+        if ($orderBy) {
+            $sql .= " ORDER BY ";
+            foreach ($orderBy as $key => $value) {
+
+                $sql .= "$key $value,";
+            }
+
+            // Remove the last comma
+            $sql = substr_replace($sql, '', -1, 1);
+        }
+
+
+
+
+        // Add limit if needed
+        if ($limit) {
+            $sql .= " LIMIT " . $limit;
+        }
+
+        // Add offset if needed
+        if ($offset) {
+            $sql .= " OFFSET " . $offset;
+        }
+
+
+        // Prepare  the query 
+        $prepared = $this->connection->prepare($sql);
+
+
+        // BindParams
+        foreach ($arrayOfToBind as $toBeBind) {
+            $prepared->bindValue(':' . $toBeBind[0], $toBeBind[1]);
+        }
+
+        // Execute query
+        $prepared->setFetchMode(\PDO::FETCH_CLASS, $this->entityClass);
+        $prepared->execute();
+        return $prepared->fetchAll();
+    }
 
 
 
@@ -409,4 +517,52 @@ class Orm
         // execute
         return $prepared->execute();
     }
+
+
+        /**
+     * Delete the object of id @var $id
+     * 
+     * 
+     * @param string $mail
+     * @param string $field
+     * 
+     * @return bool
+     */
+    public function deleteByMail(string $mail, string $field): bool
+    {
+        // The sql
+        $sql = "DELETE FROM " . $this->table . " WHERE " . $field . " = :" . $field;
+
+        // Prepare the statment
+        $prepared = $this->connection->prepare($sql);
+
+        // Bind value
+        $prepared->bindValue($field, $mail);
+
+        // execute
+        return $prepared->execute();
+    }
+
+    /**
+     * Find dinstinct column in table
+     * 
+     * @param string $columns
+     * 
+     * Ex:  "course, id"
+     * 
+     * @param string $sql_request
+     * 
+     * Ex:  "where id <= 4 and course = API"
+     * 
+     * @return $this->entityClass|null
+     */
+    public function search(string $colums =  null, string $sql_request = null ){
+
+        $sql = 'SELECT DISTINCT' . $colums . 'FROM ' . $this->table . ' ' . $sql_request;
+        $rp = $this->connection->query($sql, \PDO::FETCH_CLASS, $this->entityClass);
+        return $rp->fetchAll();
+    }
+
+
+
 }

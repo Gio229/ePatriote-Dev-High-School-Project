@@ -9,7 +9,8 @@
         opacity: 1;
         border-radius: 15px;
         text-align: left;
-        color: black;      
+        color: black;   
+        margin-bottom: 5%;   
 }
 
 .pack:hover{
@@ -25,3 +26,24 @@
     border-top-left-radius: 15px;
     background-repeat: no-repeat;
 }
+
+
+@media only screen and (max-width: 900px) {
+    
+    #page-content{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .pack{
+        width: 70%;
+        padding-bottom: 20px;
+        min-height: 400px;
+        opacity: 1;
+        border-radius: 15px;
+        text-align: left;
+        color: black; 
+    }     
+}
+
+

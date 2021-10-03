@@ -79,7 +79,7 @@
     margin-bottom: 10px;
     position: fixed;
     z-index: 40;
-
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
   }
   
@@ -95,9 +95,11 @@
   cursor: pointer;
   padding: 18px;
   width: 100%;
-  text-align: left;
+  text-align: center;
   border: none;
   outline: none;
+  font-weight: bold;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 
@@ -110,10 +112,25 @@
 .panel {
   padding: 0 18px;
   background-color: rgb(243, 243, 243);
-  display: none;
+  display: block;
   overflow: hidden;
   max-height: 0;
-  transition: 0.2s ;
+  transition: 0.2s ease;
+}
+
+.course{
+  background-image: url(../img/classes.svg);
+  background-size: 100% 100%;
+}
+
+.dev{
+  background-image: url(../img/exams.svg);
+  background-size: 100% 100%;
+}
+
+.inter{
+  background-image: url(../img/working.svg);
+  background-size: 100% 100%;
 }
 
 .program{
@@ -136,7 +153,7 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  height: 50vh;
+  height: 32vh;
   background-size: 100% 100%;
 }
 
@@ -155,6 +172,20 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   padding: 10px 15px;
 }
+
+.tabs li .a{
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 10px 15px;
+}
+.tabs li .a:hover{
+  cursor: pointer;
+  background-color: black;
+  color: #F9a826 ;
+}
+
 .tabs .tab-active a{
   background-color: black;
   color: #F9a826 ;
@@ -167,10 +198,12 @@
 }
 
 .tabs-content{
-  
+  width: inherit;
+  margin: auto;
   background-color: rgb(243, 243, 243);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   padding: 20px;
+  border-radius: 15px;
 }
 
 .tab-content.tab-active{
@@ -234,7 +267,7 @@
     color: white;
 }
 
-/* Style the button that is used to open the dadh-nav */
+/* Style the button that is used to open the dadh-nav 
 .openNote {
   font-size: 20px;
   cursor: pointer;
@@ -254,7 +287,7 @@
   background-color: #F9a826;
   color: black;
 }
-
+*/
 .note-table{
   margin-bottom: 2%;
 }
@@ -299,4 +332,51 @@
 
 .add:hover{
   opacity: 0.8;
+}
+
+.agenda{
+  width: 100%;
+  background-color: transparent;
+}
+
+.agenda-col{
+  overflow-y: auto;
+  
+  width: 20%;
+}
+
+.agenda-col-row{
+  border-top: solid 1px gray;
+}
+
+.agenda-row{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.tt{
+  padding-top: 18px;
+  min-height: 8vh;
+  box-shadow:  1px 1px rgba(0, 0, 0, 0.12), 0px 0px rgba(0, 0, 0, 0.24);
+}
+
+.section{
+  margin-top: 50px;
+  border-radius: 15px;
+  padding-top: 3px;
+  padding-bottom: 10px;
+  box-shadow:  1px 1px rgba(0, 0, 0, 0.12), 0px 0px rgba(0, 0, 0, 0.24);
+  background-color: rgb(255, 255, 255);
+}
+
+section{
+  margin-top: 50px;
+
+  padding-top: 3px;
+  padding-bottom: 10px;
+}
+
+/*#contenu{
+  background-color: rgb(49, 49, 49);
 }

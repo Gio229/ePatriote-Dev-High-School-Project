@@ -10,6 +10,7 @@
         </div>
 
         <div class="rightfoot">
+        <h1>ePatriote Dev High School</h1>
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Nesciunt harum nam ullam deserunt numquam quisquam asperiores h
                 ic facilis architecto ipsa recusandae, necessitatibus magni ab
@@ -19,5 +20,5 @@
             </p>               
         </div>
     </div>   
-    <p style="color: #999; text-align: center; background-color: black;">© 2021 by ATCHAOUE Giovanni</p>       
+    <p style="color: #999; text-align: center;">© 2021 by ATCHAOUE Giovanni</p>       
 </footer>

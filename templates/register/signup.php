@@ -11,12 +11,12 @@
 
         <header>
 
-            <?php include_once($ep_project_root . '/templates/layouts/homeNav.php'); ?>
+            <?php //include_once($ep_project_root . '/templates/layouts/homeNav.php'); ?>
 
         </header>
-
+        <br>
         <div id="contenu">
-            <h1>[Inscription]</h1>
+            
 
             <div class="contain-full">
                 <img src="<?= $ep_base_dir ?>/img/sign.svg" alt="1">
@@ -25,7 +25,7 @@
             <br><br>
             <form action="" method="POST">
 
-                <p>Veuillez remplir convenablement les champs ci-dessous.</p><br>
+            <h1>[Inscription]</h1><br>
                 <!--<table>-->
                     <!--<tr><td><label for="nom">Nom:</label></td><td><input type="text" id="nom" name="nom"required autofocus></td></tr>
                     <tr><td><label for="prenom">Prénom(s):</label></td><td><input type="text" id="prenom" name="prenom"required></td></tr>

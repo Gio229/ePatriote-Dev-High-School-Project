@@ -101,6 +101,8 @@ abstract class FormBuilder
 
         // By default form is not submitted
         $this->isSubmitted = false;
+
+        $this->method = $method;
     }
 
 
@@ -271,6 +273,7 @@ abstract class FormBuilder
      * @return void
      */
     public function handle(Request $request)
+    
     {
 
         // Getter to get the global var which hold our form field value

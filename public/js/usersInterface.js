@@ -19,11 +19,6 @@ for (i = 0; i < prog.length; i++) {
     this.classList.toggle("active");
 
     let panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
 
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
@@ -76,11 +71,14 @@ tabs.forEach((el)=>{
 /*animation for the notes system*/
 
 function openNote() {
-  document.getElementById("note").style.width = "95%";
+  document.getElementById("note").style.display = "block";
+  //document.getElementById("note").style.height = "30vh";
 }
 
 function closeNote() {
-  document.getElementById("note").style.width = "0px";
+  //document.getElementById("note").style.height = "0px";  
+  document.getElementById("note").style.display = "none";
+
 }
 
 /*animation for the manag-parents system*/
@@ -92,3 +90,22 @@ function openManagParents() {
 function closeManagParents() {
   document.getElementById("manag-parents").style.width = "0px";
 }
+
+
+   /* if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }*/
+
+  /*  let forms = document.querySelectorAll('form');
+
+    forms.forEach((form)=>{
+    
+
+     form.onsubmit = (e)=>{
+       e.preventDefault();
+        return true ;
+     }
+  
+  })*/
+
+  

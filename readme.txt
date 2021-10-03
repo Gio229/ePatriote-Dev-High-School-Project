@@ -33,6 +33,7 @@ User permissions depend on their status in the school database.
     *censor
     *informatic
 - Run in the project dir:
+-Create an acount whith the mail that you use to register in the school
 
 ```bash
 php -S localhost:9000 -t public 
@@ -40,3 +41,4 @@ php -S localhost:9000 -t public
 
 - Checkout your browser at <http://localhost:9000> and view page
 - NB: You can encounter some error base on your environnment
+

@@ -30,7 +30,7 @@ class LoginForm extends FormBuilder
        $this->submitButton->setLabel("Se connecter");
 
        $newAttr = $this->submitButton->getAttributes();
-       $newAttr["class"] = "btn btn-primary btn-lg";
+       $newAttr["class"] = "envoie";
        $this->submitButton->setAttributes($newAttr);
 
         $this

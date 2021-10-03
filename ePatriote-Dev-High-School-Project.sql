@@ -29,6 +29,7 @@ CREATE TABLE IF NOT EXISTS `student` (
   `firstName` varchar(255) NOT NULL,
   `lastName` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `classroom` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 );
 
@@ -56,5 +57,44 @@ CREATE TABLE IF NOT EXISTS `informatic` (
   `firstName` varchar(255) NOT NULL,
   `lastName` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+DROP TABLE IF EXISTS `proginterro`;
+CREATE TABLE IF NOT EXISTS `proginterro` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `classroom` varchar(255) NOT NULL,
+  `course` varchar(255) NOT NULL,
+  `theDate` date NOT NULL,
+  `theHour` time NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+DROP TABLE IF EXISTS `progexam`;
+CREATE TABLE IF NOT EXISTS `progexam` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `classroom` varchar(255) NOT NULL,
+  `course` varchar(255) NOT NULL,
+  `theDate` date NOT NULL,
+  `theHour` time NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+DROP TABLE IF EXISTS `progcourse`;
+CREATE TABLE IF NOT EXISTS `progcourse` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `classroom` varchar(255) NOT NULL,
+  `course` varchar(255) NOT NULL,
+  `theDate` date NOT NULL,
+  `theHour` time NOT NULL,
+  PRIMARY KEY (`id`)
+);
+
+DROP TABLE IF EXISTS `teaching`;
+CREATE TABLE IF NOT EXISTS `teaching` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `course` varchar(255) NOT NULL,
+  `classroom` varchar(255) NOT NULL,
+  `email_teacher` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 );

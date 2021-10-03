@@ -18,8 +18,8 @@
 
         <div id="contenu">
 
-            <h1>[A propos de nous]</h1>
-
+            <!--<h1>[A propos de nous]</h1>-->
+            <br>
             <div class="contain-full">
                 <img src="<?= $ep_base_dir ?>/img/team.svg" alt="1">
             </div>

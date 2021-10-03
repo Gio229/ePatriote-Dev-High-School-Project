@@ -11,7 +11,7 @@ use PhpFromZero\Entity\BaseEntity;
 class Student extends BaseEntity
 {
 
-    /**
+     /**
      * @var String User's first name
      */
     protected $firstName;
@@ -25,6 +25,11 @@ class Student extends BaseEntity
      * @var String User's email
      */
     protected $email;
+
+        /**
+     * @var String the classroom
+     */
+    protected $classroom;
 
 
 
@@ -47,7 +52,7 @@ class Student extends BaseEntity
      */
     public function setFirstName(?String $name)
     {
-        $this->name = $name;
+        $this->firstName = $name;
 
         return $this;
     }
@@ -59,7 +64,7 @@ class Student extends BaseEntity
      */
     public function getLastName()
     {
-        return $this->firstName;
+        return $this->lastName;
     }
 
     /**
@@ -71,7 +76,7 @@ class Student extends BaseEntity
      */
     public function setLastName(?String $name)
     {
-        $this->name = $name;
+        $this->lastName = $name;
 
         return $this;
     }
@@ -123,5 +128,29 @@ class Student extends BaseEntity
 
         return $this;
     }
+
+    /**
+     * Get the classroom
+     *
+     * @return  String
+     */
+    public function getClassroom()
+    {
+        return $this->classroom;
+    }
+
+    /**
+     * Set the classroom
+     *
+     * @param  String  $classroom  the classroom
+     * 
+     */
+    public function setClassroom(?String $classroom)
+    {
+        $this->classroom = $classroom;
+
+        return $this;
+    }
+
     
 }

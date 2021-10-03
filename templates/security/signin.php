@@ -11,12 +11,12 @@
 
         <header>
 
-            <?php include_once($ep_project_root . '/templates/layouts/homeNav.php'); ?>
+            <?php //include_once($ep_project_root . '/templates/layouts/homeNav.php'); ?>
 
         </header>
-
+        <br>
         <div id="contenu">
-            <h1>[Connection]</h1>
+            
 
             <div class="contain-full">
                 <img src="<?= $ep_base_dir ?>/img/authentication.svg" alt="1">
@@ -25,7 +25,7 @@
             <br><br>
             <form action="" method="POST">
 
-                <p>Identifiez-vous</p><br>
+            <h1>[Connection]</h1><br>
                 <!--<table>
                     <tr><td><label for="mail">Email:</label></td><td><input type="email" id="mail" name="mail"></td></tr>
                     <tr><td><label for="password">Mot de passe:</label></td><td><input type="password" id="password" name="password" required></td></tr>
@@ -35,7 +35,7 @@
             </form>
         </div>
 
-        <?php include_once($ep_project_root . '/templates/layouts/footer.php'); ?>
+        <?php //include_once($ep_project_root . '/templates/layouts/footer.php'); ?>
 
     </body>
 </html>

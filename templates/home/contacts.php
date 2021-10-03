@@ -16,22 +16,17 @@
         </header>
 
         <div id="contenu">
-            <h1>[Nous contacter]</h1>
+            <br>
 
             <div class="contain-full">
                 <img src="<?= $ep_base_dir ?>/img/contacts.svg" alt="1">
             </div>
 
-            <br><br>
-            <form action="" method="POST">
-
-                <p>Laissez-nous un message</p><br>
-                <table>
-                    <tr><td><label for="mail">Email:</label></td><td><input type="email" id="mail" name="mail"></td></tr>
-                    <tr><td><label for="message">message:</label></td><td><textarea id="password" name="password" required></textarea></td></tr>
-                </table>
-                <input class="envoie" type="submit">
-
+            
+            <form  method="POST">
+                <p><?= $_['error'] ?></p>
+                <h1>[Nous contacter]</h1><br>
+                <?= $_['form'] ?>
             </form>
         </div>
 

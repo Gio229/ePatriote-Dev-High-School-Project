@@ -27,6 +27,10 @@ class AuthController extends SecurityController
     // User repository
     protected $userRepo;
     protected $studentRepo;
+    protected $teacherRepo;
+    protected $censorRepo;
+    protected $parentRepo;
+    protected $informaticRepo;
 
 
     public function __construct()

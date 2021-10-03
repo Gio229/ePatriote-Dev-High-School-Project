@@ -25,20 +25,21 @@ class TextAreaField extends FormField
         $attributes = $this->getAttributes();
 
         // A text field has minimum this HTML code
-        $this->view = "<textarea name='$name' ";
-        
-        // Add all other attributes like class, id, etc.
+        $this->view = "<tr><td><label>".$attributes['label']."</label></td><td>";
+        $this->view .= "<textarea name='$name' type='password' ";
+
+        // Add all other attributes like class, id, required etc.
         foreach ($attributes as $key => $value) {
             $this->view .=" $key='$value' ";
         }
         
-        return $this->view."></textarea>";
-    }  
-    
-    /**
-     * Cas the value into string
-     */
-    public static function cast($value){ 
-        return (string) $value;
+        return $this->view." /></textarea></td></tr>";
     }
+
+
+     public static function cast($value){
+        return (string) $value;
+     }
+        
+
 }
