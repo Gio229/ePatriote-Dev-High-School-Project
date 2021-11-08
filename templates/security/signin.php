@@ -19,7 +19,7 @@
             
 
             <div class="contain-full">
-                <img src="<?= $ep_base_dir ?>/img/authentication.svg" alt="1">
+                <img class="illustration-img-program" src="<?= $ep_base_dir ?>/img/authentication.svg" alt="1">
             </div>
 
             <br><br>

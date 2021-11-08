@@ -4,10 +4,17 @@ namespace App\Controllers;
 
 use App\Entities\ProgInterro;
 use App\Forms\ProgInterroForm;
+use App\Forms\NoteSelectForm;
 use App\Repositories\UserRepository;
 use App\Repositories\TeachingRepository;
 use App\Repositories\StudentRepository;
+use App\Repositories\StudentTempRepository;
 use App\Repositories\ProgInterroRepository;
+use App\Repositories\PARepository;
+use App\Repositories\APIRepository;
+use App\Repositories\NGINXRepository;
+use App\Repositories\HTPPRepository;
+use App\Repositories\ASLRepository;
 use PhpFromZero\Controller\BaseController;
 use PhpFromZero\Http\Request;
 use PhpFromZero\Http\Response;
@@ -23,6 +30,11 @@ class TeacherController extends BaseController
     protected $progInterroRepo;
     protected $studentRepo;
     protected $teachingRepo;
+    public $paRepo;
+    public $aslRepo;
+    public $apiRepo;
+    public $nginxRepo;
+    public $htppRepo;
 
 
 
@@ -33,6 +45,11 @@ class TeacherController extends BaseController
         $this->progInterroRepo = new ProgInterroRepository();
         $this->studentRepo = new StudentRepository();
         $this->teachingRepo = new TeachingRepository();
+        $this->paRepo = new PARepository();
+        $this->aslRepo = new ASLRepository();
+        $this->nginxRepo = new NGINXRepository();
+        $this->apiRepo = new APIRepository();
+        $this->htppRepo = new HTPPRepository();
 
 
     }
@@ -81,6 +98,58 @@ class TeacherController extends BaseController
             "error" => $errorMsg
         ]);
     }
+
+    public function note_select(Request $request): Response
+    {
+        $form_note_select = new NoteSelectForm($request->getUrl());
+
+        $errorMsg = null;
+
+        // Handle the form and prepare field form
+        $form_note_select->handle($request);
+
+        if ($form_note_select->isSubmitted()) {
+
+           $this->studentTemp = [
+                "email" => $form_note_select->get("email"),
+                "course" => $form_note_select->get("course"),
+            ];
+
+
+            return $this->note($request, $this->studentTemp);
+        }
+
+
+        $teachingInfos = $this->teachingRepo->findColBy(["classroom"],[
+            "email_teacher" => ["=",$request->getUser()['email']]
+            ]);
+
+        return $this->render('teacher/noteSelect.php', [
+            "user" => $request->getUser(),
+            "form_note_select" => $form_note_select->render(),
+            "teachingInfos" => $teachingInfos,
+            "students" => $this->studentRepo->findAll(),
+            "error" => $errorMsg
+        ]);
+    }
+
+    public function note(Request $request, array $studentTemp): Response
+    {
+        $i = strtolower($studentTemp['course']) . 'Repo' ;
+
+        return $this->render('teacher/note.php', [
+            "user" => $request->getUser(),
+            "temp" => $studentTemp,
+            "student" => $this->studentRepo->findBy([
+                "email" => ["=", $studentTemp['email']]
+            ]),
+            "details" => $this->$i->findBy([
+                "email" => ["=", $studentTemp['email']]
+                ])
+            //"error" => $errorMsg
+        ]);
+    }
+
 
 
 }

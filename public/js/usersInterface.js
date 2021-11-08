@@ -108,4 +108,17 @@ function closeManagParents() {
   
   })*/
 
+    let next = document.getElementsByClassName("next");
+    
+    next.addEventListener("click", function() {
   
+      this.classList.toggle("active");
+  
+      let nextForm = document.getElementsByClassName("nextForm");
+  
+      if (nextForm.style.maxHeight) {
+        nextForm.style.maxHeight = null;
+      } else {
+        nextForm.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });

@@ -14,7 +14,7 @@
 
     <?php if(isTeacher()): ?>
         <div class="navigation"><a class="navLink" href="/teacher/me">Home</a></div>
-        <div class="navigation"><a class="navLink" href="/teacher/me">Noter mes élèves</a></div>
+        <div class="navigation"><a class="navLink" href="/teacher/note_select">Noter mes élèves</a></div>
     <?php endif ?>
 
     <?php if(isParent()): ?>

@@ -10,17 +10,17 @@
         </div>
         
         <?php if(isCensor()): ?>
-        <div class="nav-row">
+        <!--<div class="nav-row">
             <a href="#"class="openNote" onclick="openManagParents()">Gérer les parents d'élève</a>
         </div>
         <div class="nav-row">
             <a href="#"class="openNote" onclick="openNote()">Gérer les professeurs</a>
-        </div>
+        </div>-->
         <?php endif ?>
         <?php if(isTeacher()): ?>
-        <div class="nav-row">
+        <!--<div class="nav-row">
             <a href="#"class="openNote" onclick="openNote()">Notez mes élèves</a>
-        </div>
+        </div>-->
         <?php endif ?>
         <div class="nav-row">
             <a href="#">Paramètres</a>

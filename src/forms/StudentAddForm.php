@@ -14,10 +14,10 @@ use PhpFromZero\HtmlForms\FormBuilder;
 
 
 /**
- * StudentForm form
+ * StudentAddForm form
  * 
  */
-class StudentForm extends FormBuilder
+class StudentAddForm extends FormBuilder
 {
 
     public function __construct(string $action)
@@ -35,11 +35,11 @@ class StudentForm extends FormBuilder
     {
         // Override thing here like, submit button label, form name, form id
         
-        $this->submitButton->setLabel("Modifier");
+        $this->submitButton->setLabel("Ajouter");
 
         $this
-            ->add("classroom", SelectField::class, [
-                "id" => "classroom",
+            ->add("classroom_s", SelectField::class, [
+                "id" => "classroom_s",
                 "required" => true,
                 "placeholder"=> "\tEntrez la classe",
                 "class"=> "data",
@@ -50,22 +50,22 @@ class StudentForm extends FormBuilder
                     "terminale" => "terminale",
                 ]
             ])
-            ->add("firstName", TextField::class, [
-                "id" => "firstName",
+            ->add("firstName_s", TextField::class, [
+                "id" => "firstName_s",
                 "required" => true,
                 "placeholder"=> "",
                 "class"=> "data",
                 "label" => "Prénom(s)"
             ])
-            ->add("lastName", TextField::class, [
-                "id" => "lastName",
+            ->add("lastName_s", TextField::class, [
+                "id" => "lastName_s",
                 "required" => true,
                 "placeholder"=> "",
                 "class"=> "data",
                 "label" => "Nom"
             ])
-            ->add("email", EmailField::class, [
-                "id" => "email",
+            ->add("email_s", EmailField::class, [
+                "id" => "email_s",
                 "required" => true,
                 "placeholder"=> "\tEntrez votre email",
                 "class"=> "data",

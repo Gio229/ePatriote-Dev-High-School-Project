@@ -110,7 +110,7 @@
     });
     document.getElementById("progexamform").onsubmit = (e)=>{
 
-        var datal = '';
+        var data = '';
         elements.forEach((e)=>{
 
             data += e.getAttribute('name') + '=' + e.value + '&';
@@ -122,7 +122,7 @@
 
         xhr.onreadystatechange = ()=>{
             if(xhr.readyState == 4 && xhr.status == 200){
-                console.log(datal);
+                console.log(data);
             }else if(xhr.readyState == 4){
                 alert('Une erreur est survenue...');
             }
@@ -138,7 +138,7 @@
 
             e.value = '';
 
-        });
+        });//console.log('ok')
 
         return true;
     }

@@ -30,15 +30,17 @@
         </div>
 
         <section >
-
+        <p>[Elèves]</p>
             <div class="management ">
                 <div class="management-content">
                         <br>
                     <!--<form class="form ">-->
-                        <?= $_['form_student_edit'] ?>
+                        <?= $_['students_add'] ?>
                     <!--</form>-->
 
                 </div>
+
+                <div class="separate"></div>
 
                 <div class="management-content">
                     <br>
@@ -50,15 +52,39 @@
         </section>
 
         <section >
-
+            <p>[Professeurs]</p>     
             <div class="management ">
                 <div class="management-content">
                         <br>
                     <!--<form class="form ">-->
-                        <?= $_['form_student_edit'] ?>
+                        <?= $_['teachers_add'] ?>
                     <!--</form>-->
 
                 </div>
+
+                <div class="separate"></div>
+                
+                <div class="management-content">
+                    <br>
+                    <?= $_['form_student_delete'] ?>
+                </div>
+            </div>
+            
+
+        </section>
+
+        <section >
+        <p>[Parents]</p>
+            <div class="management ">
+                <div class="management-content">
+                        <br>
+                    <!--<form class="form ">-->
+                        <?= $_['parents_add'] ?>
+                    <!--</form>-->
+
+                </div>
+
+                <div class="separate"></div>
 
                 <div class="management-content">
                     <br>
@@ -70,35 +96,17 @@
         </section>
 
         <section >
-
+            <p>[Censeurs]</p>
             <div class="management ">
                 <div class="management-content">
                         <br>
                     <!--<form class="form ">-->
-                        <?= $_['form_student_edit'] ?>
+                        <?= $_['censors_add'] ?>
                     <!--</form>-->
 
                 </div>
 
-                <div class="management-content">
-                    <br>
-                    <?= $_['form_student_delete'] ?>
-                </div>
-            </div>
-            
-
-        </section>
-
-        <section >
-
-            <div class="management ">
-                <div class="management-content">
-                        <br>
-                    <!--<form class="form ">-->
-                        <?= $_['form_student_edit'] ?>
-                    <!--</form>-->
-
-                </div>
+                <div class="separate"></div>
 
                 <div class="management-content">
                     <br>
