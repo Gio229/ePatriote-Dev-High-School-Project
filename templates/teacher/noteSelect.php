@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="<?= $ep_base_dir ?>/css/management.css" />
 </head>
 <body>
+    
     <?php if(isTeacher()): ?>
 
     <?php include_once($ep_project_root . '/templates/layouts/myMenu.php'); ?>

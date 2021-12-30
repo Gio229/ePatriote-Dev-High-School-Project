@@ -15,6 +15,7 @@ use App\Entities\NGINX;
 use App\Entities\MoySem;
 use App\Entities\CourseMoySem;
 use App\Forms\ProgExamForm;
+use App\Forms\PublicationForm;
 use App\Forms\TeachingForm;
 use App\Forms\StudentForm;
 use App\Forms\StudentAddForm;
@@ -578,9 +579,17 @@ class AdminController extends BaseController
      * 
      * @return Response
      */
-    public function editEleve(Request $request): Response
+    public function results(Request $request): Response
     {
-        return $this->render('administration/editEleve.php', [
+
+        $form_pub = new PublicationForm($request->getUrl());
+        $errorMsg = null;
+
+        // Handle the form and prepare field form
+        $form_pub->handle($request);
+
+        return $this->render('administration/results.php', [
+            "form_pub" => $form_pub->render(),
             
         ]);
     }

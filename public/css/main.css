@@ -79,12 +79,10 @@ nav{
 }
 .texte h1{
     font-size: 90px;
-    margin: 10px;
+    margin-bottom: 10px;
 }
 
-.texte h1:hover{
-    transform: scale(0.8);
-}
+
 
 .texte h1::after{
     content: "";

@@ -18,7 +18,7 @@
       
     <div id="contenu">
     <br><br>
-        <section class="management-col ">
+        <section >
             <p>Donner/Retirer le rôle de parent</p>
             
                 <?= $_['form_role'] ?>

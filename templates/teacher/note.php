@@ -12,7 +12,8 @@
 <body>
     <?php if(isTeacher()): ?>
 
-    <?php include_once($ep_project_root . '/templates/layouts/myMenu.php'); ?>   
+    <?php include_once($ep_project_root . '/templates/layouts/myMenu.php'); ?> 
+    <?php include_once($ep_project_root . '/templates/layouts/userNav.php'); ?>    
 
       
     <div id="contenu">
@@ -29,6 +30,7 @@
 
                 <div>Matière: <h4 style="display: inline;"><?= $_['temp']['course']?></h2></div>
                 <div>Elève: <?= $_['student'][0]['lastName'] . ' ' .$_['student'][0]['firstName']?></div>
+                <div>Classe: <?= $_['student'][0]['classroom']?></div>
                 <br>!Détails
                 
                 <div class="agenda" style="background-color: black; color: white;">
@@ -97,10 +99,10 @@
                 
                 <div class="next"></div>
             </div>
-
+            <?= $_['form_note']?>
         </section>
 
-        <form action="" class="nextForm" style = "max-height: null;"></form>
+        
 
     </div>
 

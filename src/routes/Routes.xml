@@ -10,8 +10,9 @@
 	<route url="/student/me/myresults" controller="StudentController" action="myResults" />
 	<route url="/teacher/me" controller="TeacherController" action="index" />
 	<route url="/teacher/note_select" controller="TeacherController" action="note_select" />
-	<route url="/teacher/note" controller="TeacherController" action="note" />
+	<!--<route url="/teacher/note" controller="TeacherController" action="note" />-->
 	<route url="/administration/censor" controller="AdminController" action="censor" />
+	<route url="/administration/censor/results" controller="AdminController" action="results" />
 	<route url="/administration/censor_management/teacher" controller="AdminController" action="censor_teacherManagement" />
 	<route url="/administration/censor_management/parent" controller="AdminController" action="censor_parentManagement" />
 	<route url="/administration/censor_management/student" controller="AdminController" action="censor_studentManagement" />

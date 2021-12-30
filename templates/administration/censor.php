@@ -83,13 +83,13 @@
                 
         </section> -->
         <section class="program section">
-            <h2>[Publier les résultats]</h2>
+            <a href="/administration/censor/results"><h2>[Publier les résultats]</h2></a>
             <div class="container-program">
 
                 <div class="illustration-program">
                     <img class="illustration-img-program" src="<?= $ep_base_dir ?>/img/bulletins.svg" alt="1">
                 </div>
-                <h3>(Rien pour le moment)</h3>
+
             </div>
         </section> 
                 

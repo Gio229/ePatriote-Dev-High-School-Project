@@ -36,7 +36,7 @@
 
         </section><br>
 
-        <section class="management-col ">
+        <section>
         <p>Donner/Retirer le rôle de professeur</p>
                 <!--<form class="form" action="" method="POST">
 

@@ -396,3 +396,18 @@ section{
   margin: auto;
 
 }
+
+.next:hover{
+  cursor: pointer;
+
+}
+.nextForm{
+    border-radius: 15px;
+    width: 50%;
+    min-height: 0px;
+    background-color: #f9A826;
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height 0.3s;
+  display: none;
+}

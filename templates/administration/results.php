@@ -11,22 +11,17 @@
     <link rel="stylesheet" href="<?= $ep_base_dir ?>/css/management.css" />
 </head>
 <body>
-    <?php if(isStudent()): ?>
+    <?php if(isCensor()): ?>
 
     <?php include_once($ep_project_root . '/templates/layouts/myMenu.php'); ?>
     <?php include_once($ep_project_root . '/templates/layouts/userNav.php'); ?>    
       
     <div id="contenu">
-
+    <br><br>
         <section class="program section">
-            <div class="container-program">
-                <input type="search">
-                <div class="illustration-program">
-                    <img class="illustration-img-program" src="<?= $ep_base_dir ?>/img/bulletins.svg" alt="1">
-                </div>
-                <h3>(Rien pour le moment)</h3>
-            </div>
-        </section>    
+            <h2>Publier les résultats</h2>
+            <?= $_['form_pub']?>       
+        </section>
 
     </div>
 
