@@ -34,7 +34,7 @@
                 <p>Confier/Retirer une classe à un professeur</p>
             </div>
 
-        </section><br>
+        </section>
 
         <section>
         <p>Donner/Retirer le rôle de professeur</p>

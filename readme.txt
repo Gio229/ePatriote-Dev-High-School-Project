@@ -1,3 +1,4 @@
+--leave me a message---->aagmaougnon@gmail.com
 ## Informations about the database and the application:
 The application is linked to the school's database.
 User permissions depend on their status in the school database.

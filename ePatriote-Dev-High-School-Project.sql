@@ -229,12 +229,20 @@ CREATE TABLE publication (
   PRIMARY KEY (id)
 );
 
-----------------------------
+-----------INSERTION DE DONNEES-----------------
 
-DROP TABLE IF EXISTS test;
-CREATE TABLE IF NOT EXISTS test (
-  id int(11) NOT NULL AUTO_INCREMENT,
-  sem int(2) NOT NULL,
-  PRIMARY KEY (id)
-);
+INSERT INTO student(firstName, lastName, email, classroom) VALUES
+  ('jfk', 'ASHBORN', 'ash@gmail.com', 'seconde'),
+  ('john', 'MAGENGO', 'magengo@gmail.com', 'première'),
+  ('Giovanni', 'ATCHAOUE', 'aagmaougnon@gmail.com', 'terminal');
+
+INSERT INTO teacher(firstName, lastName, email) VALUES
+  ('Prof', 'PROF', 'prof@gmail.com');
+
+INSERT INTO censor(firstName, lastName, email) VALUES
+  ('Censor', 'CENSOR', 'censor@gmail.com');
+
+INSERT INTO parents(firstName, lastName, email) VALUES
+  ('parent1', 'PARENT1', 'parent1@gmail.com'),
+  ('parent2', 'PARENT2', 'parent2@gmail.com');
 ----------------------------------
